@@ -1,0 +1,10 @@
+<div class='todo-item'>
+  <div>
+    {{item.title}}
+  </div>
+  <div>
+    <select [(ngModel)]="item.status">
+      <option *ngFor="let status of availableStatuses">{{status}}</option>
+    </select>
+  </div>
+</div>

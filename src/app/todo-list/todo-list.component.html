@@ -1,0 +1,11 @@
+<div class="todo-list">
+  <div *ngIf="list.length === 0; else todoList" class="no-items-msg">
+    You don't have anything to do
+  </div>
+</div>
+<ng-template #todoList>
+  <div class="list">
+    <todo-item *ngFor="let item of list" [item]="item">
+    </todo-item>
+  </div>
+</ng-template>

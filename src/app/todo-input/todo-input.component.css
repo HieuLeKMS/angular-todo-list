@@ -1,0 +1,28 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.form-control {
+  padding: 0.25rem;
+  margin: 0.25rem;
+}
+
+.btn-primary {
+  background-color: #0c7beb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #066cd1;
+}
+
+.btn-primary:disabled {
+  background-color: gray;
+}
+
+.error-msg {
+  color: red;
+  margin: 0 0 0.25rem 0.5rem;
+}

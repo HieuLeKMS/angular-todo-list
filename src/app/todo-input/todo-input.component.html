@@ -1,0 +1,23 @@
+<form [formGroup]="inputForm" #formDir="ngForm" (ngSubmit)="onSubmit(inputForm.value)">
+  <div class="input-form">
+    <input placeholder="Title" formControlName="title" class="form-control">
+    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error-msg">
+      <div *ngIf="title.errors.required">
+        Title is required
+      </div>
+      <div *ngIf="title.errors.pattern">
+        Title cannot contain special characters
+      </div>
+    </div>
+    <textarea placeholder="Description" formControlName="description" class="form-control"></textarea>
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-msg">
+      <div *ngIf="description.errors.required">
+        Description is required
+      </div>
+      <div *ngIf="description.errors.maxlength">
+        Description is limited to 250 characters
+      </div>
+    </div>
+    <button type="submit" class="" [disabled]="inputForm.invalid" class="form-control btn-primary">Submit</button>
+  </div>
+</form>
